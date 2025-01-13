@@ -1,0 +1,165 @@
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('main.jpeg'); /* Replace with your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Title styling */
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+/* Tabs styling */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1 1 calc(20% - 10px);
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #f39c12;
+    color: #000;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #d35400;
+}
+
+/* Tab content styling */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Input container styling */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    flex-wrap: nowrap; /* Ensure items stay on the same line */
+}
+
+input, select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 48%; /* Ensure both fields take equal width */
+    font-size: 1em;
+    background-color: #fff;
+    color: #000;
+    box-sizing: border-box; /* Prevent content overflow */
+}
+
+input:focus, select:focus {
+    outline: 2px solid #f39c12;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f39c12;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+/* Results styling */
+.results {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f39c12;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1.1em;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .tab {
+        flex: 1 1 calc(33% - 10px);
+        font-size: 0.9em;
+    }
+
+    .input-container {
+        flex-wrap: wrap; /* Allow wrapping for very small screens */
+    }
+
+    input, select {
+        width: 100%; /* Stack inputs vertically on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .tab {
+        flex: 1 1 100%;
+        font-size: 0.9em;
+    }
+
+    input, select {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .results {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Unit Converter</h1>
+        <div class="tabs">
+            <button class="tab" onclick="showTab('length')">Length</button>
+            <button class="tab" onclick="showTab('weight')">Weight</button>
+            <button class="tab" onclick="showTab('temperature')">Temperature</button>
+            <button class="tab" onclick="showTab('speed')">Speed</button>
+        </div>
+        <!-- Length Conversion Section -->
+        <div id="length" class="tab-content active">
+            <h2>Length Converter</h2>
+            <div class="input-container">
+                <input type="number" id="length-value" placeholder="Enter value" oninput="convertLength()">
+                <select id="length-unit" onchange="convertLength()">
+                    <option value="cm">Centimeters (cm)</option>
+                    <option value="mm">Millimeters (mm)</option>
+                    <option value="m">Meters (m)</option>
+                    <option value="km">Kilometers (km)</option>
+                    <option value="in">Inches (in)</option>
+                    <option value="ft">Feet (ft)</option>
+                </select>
+            </div>
+            <div class="results" id="length-results"></div>
+        </div>
+        <!-- Weight Conversion Section -->
+        <div id="weight" class="tab-content">
+            <h2>Weight Converter</h2>
+            <div class="input-container">
+                <input type="number" id="weight-value" placeholder="Enter value" oninput="convertWeight()">
+                <select id="weight-unit" onchange="convertWeight()">
+                    <option value="g">Grams (g)</option>
+                    <option value="kg">Kilograms (kg)</option>
+                    <option value="mg">Milligrams (mg)</option>
+                    <option value="cg">Centigrams (cg)</option>
+                </select>
+            </div>
+            <div class="results" id="weight-results"></div>
+        </div>
+        <!-- Temperature Conversion Section -->
+        <div id="temperature" class="tab-content">
+            <h2>Temperature Converter</h2>
+            <div class="input-container">
+                <input type="number" id="temp-value" placeholder="Enter value" oninput="convertTemperature()">
+                <select id="temp-unit" onchange="convertTemperature()">
+                    <option value="c">Celsius (°C)</option>
+                    <option value="f">Fahrenheit (°F)</option>
+                    <option value="k">Kelvin (K)</option>
+                </select>
+            </div>
+            <div class="results" id="temperature-results"></div>
+        </div>
+        <!-- Speed Conversion Section -->
+        <div id="speed" class="tab-content">
+            <h2>Speed Converter</h2>
+            <div class="input-container">
+                <input type="number" id="speed-value" placeholder="Enter value" oninput="convertSpeed()">
+                <select id="speed-unit" onchange="convertSpeed()">
+                    <option value="mps">Meters per second (m/s)</option>
+                    <option value="kmph">Kilometers per hour (km/h)</option>
+                    <option value="mph">Miles per hour (mph)</option>
+                    <option value="fps">Feet per second (ft/s)</option>
+                </select>
+            </div>
+            <div class="results" id="speed-results"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
